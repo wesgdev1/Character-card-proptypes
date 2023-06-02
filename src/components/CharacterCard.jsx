@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const CharacterCard = (props) => (
+const CharacterCard = ({ character }) => (
   <article className="characterCard">
     <div className="characterImagen">
       <img
@@ -10,7 +10,7 @@ const CharacterCard = (props) => (
     </div>
     <div className="characterContent">
       <div className="section">
-        <h2>Morty Smith</h2>
+        <h2>{character.name}</h2>
         <span className="status">
           <span className={`status__icon status__alive`}></span>
           Alive - Human

@@ -2,7 +2,8 @@ import CharacterCard from "./components/CharacterCard";
 
 import data from "./assets/data.json";
 
-import "./styles.css";
+import "./app.css";
+import CharacterCardList from "./components/CharacterCardList";
 
 function App() {
   return (
@@ -11,10 +12,8 @@ function App() {
       <h2>Your code here</h2>
 
       <div className="container">
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
+        <CharacterCardList list={data} />
+        {/* <CharacterCard /> */}
       </div>
     </div>
   );
