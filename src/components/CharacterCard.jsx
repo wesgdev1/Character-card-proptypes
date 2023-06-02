@@ -1,4 +1,5 @@
 import "./styles.css";
+import PropTypes from "prop-types";
 
 const CharacterCard = ({ character }) => (
   <article className="characterCard">
@@ -30,5 +31,23 @@ const CharacterCard = ({ character }) => (
     </div>
   </article>
 );
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    location: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+
+    origin: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default CharacterCard;

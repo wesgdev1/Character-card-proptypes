@@ -13,6 +13,8 @@ const CharacterCardList = ({ list }) => {
   );
 };
 
-CharacterCardList.propTypes = {};
+CharacterCardList.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.shape).isRequired,
+};
 
 export default CharacterCardList;
